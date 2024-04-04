@@ -1,9 +1,12 @@
 document.querySelector("#sameAddress").addEventListener("click", function() {
+    let bill = document.querySelector('#bill');
+    let home = document.querySelector('#home');
     if (this.checked) {
-        console.log(document.getElementById("bill").textContent);
-        // document.getElementById("home").textContent = document.getElementById("bill").innerHTML;
+        home.value = bill.value;
+        home.disabled = true;
     }
     else {
-        document.getElementById("home").style.display = "block";
+        home.value = "";
+        home.disabled = false;
     }
 })
